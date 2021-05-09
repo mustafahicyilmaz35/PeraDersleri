@@ -19,6 +19,10 @@ public class takipci_kamera : MonoBehaviour
     }
     private void LateUpdate()
     {
+        if (kure_hareketi.fall == true)
+        {
+            return;
+        }
         transform.position = takip_edilen.position + mesafe;
     }
 }

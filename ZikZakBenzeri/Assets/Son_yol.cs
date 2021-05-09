@@ -17,7 +17,16 @@ public class Son_yol : MonoBehaviour
 
     public void yol_olusturma()
     {
-        son_yol = Instantiate(son_yol, son_yol.transform.position + Vector3.forward, son_yol.transform.rotation); son_yol = Instantiate(son_yol, son_yol.transform.position + Vector3.forward, son_yol.transform.rotation);
+        Vector3 yon;
+        if (UnityEngine.Random.Range(0, 2) == 0)
+        {
+            yon = Vector3.forward;
+        }
+        else
+        {
+            yon = Vector3.left;
+        }
+        son_yol = Instantiate(son_yol, son_yol.transform.position + yon, son_yol.transform.rotation);
     }
 
     // Update is called once per frame
